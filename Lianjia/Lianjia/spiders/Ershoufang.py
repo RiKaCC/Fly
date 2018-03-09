@@ -19,4 +19,8 @@ class ErshoufangSpider(scrapy.Spider):
         torrent['url'] = response.url
         torrent['name'] = response.xpath("//div[@class='title']/a/text()").extract()
         torrent['price'] = response.xpath("//div[@class='totalPrice']/span/text()").extract()
+        ret = {}
+        for i, val in enumerate(torrent['name']):
+            ret[val] = torrent['price'][i]
+        print(ret)
         return torrent
