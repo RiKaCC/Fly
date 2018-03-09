@@ -31,7 +31,10 @@ create a spider
 
 `scrapy genspider mydomain mydomain.com`
 
-mydomain is your spider name, mydomain.com is your spider's first url
+mydomain is your spider name, mydomain.com is your spider's first ur
 
 
-## just a test
+
+
+
+al
