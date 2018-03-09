@@ -17,6 +17,6 @@ class ErshoufangSpider(scrapy.Spider):
     def parse(self, response):
         torrent = LianjiaItem()
         torrent['url'] = response.url
-        torrent['name'] = response.xpath("//div[@class='title']/text()").extract()
+        torrent['name'] = response.xpath("//div[@class='title']/a/text()").extract()
         torrent['price'] = response.xpath("//div[@class='totalPrice']/span/text()").extract()
         return torrent
