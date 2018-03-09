@@ -3,6 +3,8 @@ import scrapy
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors import LinkExtractor
 
+class
+
 class LianjiaItem(scrapy.Item):
     url  = scrapy.Field()
     name = scrapy.Field()
