@@ -63,9 +63,10 @@ class ErshoufangSpider(scrapy.Spider):
                    total_price=%s,unit_price=%s,follow=%s,watch=%s, querytime=%s"#name=`torrent['name'][i]`,price=`torrent['price'][i]`,follow=`torrent['follow'][i]`,watch=`torrent['watch'][i]`,querytime=`now`"
             follow = getNum(torrent['follow'][i])
             watch = getNum(torrent['watch'][i])
+            unit_price = getNum(torrent['unit_price'][i])
             print(sql)
             print(torrent['houseid'][i], torrent['total_price'][i], torrent['follow'][i], torrent['watch'][i], now)
-            cursor.execute(sql,(torrent['houseid'][i], torrent['total_price'][i], follow, watch, torrent['region'][i], torrent['house_type'][i], torrent['area'][i], torrent['orientation'][i], torrent['design'][i], torrent['unit_price'][i], now,    torrent['total_price'][i],torrent['unit_price'][i],follow,watch, now))
+            cursor.execute(sql,(torrent['houseid'][i], torrent['total_price'][i], follow, watch, torrent['region'][i], torrent['house_type'][i], torrent['area'][i], torrent['orientation'][i], torrent['design'][i], unit_price, now,    torrent['total_price'][i],unit_price,follow,watch, now))
             #cursor.execute(sql)
            #print(ret)
         return torrent
